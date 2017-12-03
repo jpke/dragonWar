@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import SelectedDragon from './SelectedDragon';
 // import logo from './logo.svg';
-import dragon1 from './3.jpg';
-import dragon2 from './4.jpg';
-import dragon3 from './5.jpg';
+import dragon1 from './water-dragon.jpg';
+import dragon2 from './fire-dragon.png';
+import dragon3 from './nature-dragon.png';
 import './App.css';
 
 class App extends Component {
@@ -15,9 +15,11 @@ class App extends Component {
   }
 
   selectDragon = e => {
+    console.log(e.target.name);
     console.log('hovered');
     let selectedDragon;
-    switch (e) {
+    console.log(e.target.name === 'dragon1');
+    switch (e.target.name) {
       case 'dragon1': {
         selectedDragon = dragon1;
         break;
@@ -34,6 +36,8 @@ class App extends Component {
         selectedDragon = dragon2;
       }
     }
+
+    console.log(selectedDragon);
     this.setState({ selectedDragon });
   };
 
@@ -73,27 +77,24 @@ class App extends Component {
           <SelectedDragon selectedDragon={this.state.selectedDragon} />
           <div className="dragon-options">
             <img
+              className="eggOption"
               src={dragon1}
               name="dragon1"
               alt="dragon 1"
-              width="156"
-              height="150"
               onMouseOver={this.selectDragon}
             />
             <img
+              className="eggOption"
               src={dragon2}
               name="dragon2"
               alt="dragon 1"
-              width="156"
-              height="150"
               onMouseOver={this.selectDragon}
             />
             <img
+              className="eggOption"
               src={dragon3}
               name="dragon3"
               alt="dragon 1"
-              width="156"
-              height="150"
               onMouseOver={this.selectDragon}
             />
           </div>

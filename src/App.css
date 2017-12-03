@@ -66,8 +66,13 @@ h2 {
 img:hover {
   border: 10px;
   border-style: red;
-  width: 168px;
-  height: 160px;
+  width: 166px;
+  height: 200px;
+}
+
+.eggOption {
+  width: '156';
+  height: '190';
 }
 
 .dragon-options {
