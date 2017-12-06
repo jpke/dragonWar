@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SelectedDragon from './SelectedDragon';
 // import logo from './logo.svg';
-import dragon1 from './water-dragon.jpg';
+import dragon1 from './water-dragon.png';
 import dragon2 from './fire-dragon.png';
 import dragon3 from './nature-dragon.png';
 import './App.css';
@@ -15,8 +15,6 @@ class App extends Component {
   }
 
   selectDragon = e => {
-    console.log(e.target.name);
-    console.log('hovered');
     let selectedDragon;
     console.log(e.target.name === 'dragon1');
     switch (e.target.name) {
@@ -76,27 +74,33 @@ class App extends Component {
           <h2>Pick your dragon</h2>
           <SelectedDragon selectedDragon={this.state.selectedDragon} />
           <div className="dragon-options">
-            <img
-              className="eggOption"
-              src={dragon1}
-              name="dragon1"
-              alt="dragon 1"
-              onMouseOver={this.selectDragon}
-            />
-            <img
-              className="eggOption"
-              src={dragon2}
-              name="dragon2"
-              alt="dragon 1"
-              onMouseOver={this.selectDragon}
-            />
-            <img
-              className="eggOption"
-              src={dragon3}
-              name="dragon3"
-              alt="dragon 1"
-              onMouseOver={this.selectDragon}
-            />
+            <div className="eggOptionContainer">
+              <img
+                className="eggOption"
+                src={dragon1}
+                name="dragon1"
+                alt="dragon 1"
+                onMouseOver={this.selectDragon}
+              />
+            </div>
+            <div className="eggOptionContainer">
+              <img
+                className="eggOption"
+                src={dragon2}
+                name="dragon2"
+                alt="dragon 1"
+                onMouseOver={this.selectDragon}
+              />
+            </div>
+            <div className="eggOptionContainer">
+              <img
+                className="eggOption"
+                src={dragon3}
+                name="dragon3"
+                alt="dragon 1"
+                onMouseOver={this.selectDragon}
+              />
+            </div>
           </div>
         </div>
       </div>

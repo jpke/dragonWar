@@ -63,20 +63,61 @@ h2 {
   font-size: 33px;
 }
 
-img:hover {
+.eggOption {
+  height: 190px;
+}
+
+.eggOption:hover {
   border: 10px;
   border-style: red;
-  width: 166px;
   height: 200px;
 }
 
-.eggOption {
-  width: '156';
-  height: '190';
+.eggOptionContainer {
+  width: 33%;
 }
 
 .dragon-options {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  max-width: 790px;
+  margin: 0 auto;
+}
+
+.selectedDragonContainer {
+  height: 240px;
+}
+
+.eggSelected {
+  height: 220px;
+  animation: pulse 1.5s ease-out 0s alternate infinite none running;
+}
+
+@keyframes pulse {
+  0% {
+    height: 218px;
+  }
+  50% {
+    height: 222px;
+  }
+  100% {
+    height: 226px;
+  }
+}
+
+.wobble {
+  animation: wobble 0.5s ease-out 0s alternate infinite none running;
+}
+
+@keyframes wobble {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+  100% {
+    transform: rotate(-2deg);
+  }
 }
